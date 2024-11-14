@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .text-light-red {
+      color: hsl(0, 100%, 67%)
+    }
+
+    .text-orange-yellow {
+      color: hsl(39, 100%, 56%)
+    }
+
+    .text-green-teal {
+      color: hsl(166, 100%, 37%)
+    }
+
+    .text-cobalt-blue {
+      color: hsl(234, 85%, 45%);
+    }
+  </style>
+  <style>
+    .bg-pale-blue {
+      background-color: hsl(221, 100%, 96%);
+    }
+
+    .bg-light-lavender {
+      background-color: hsl(241, 100%, 89%)
+    }
+
+    .bg-gray-blue {
+      background-color: hsl(224, 30%, 27%)
+    }
+  </style>
+  <style>
+    .bg-gradient {
+      background: linear-gradient(to bottom,
+          hsl(252, 100%, 67%),
+          hsl(241, 81%, 54%));
+    }
+
+    .c-White {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+
+
+    .button-background {
+      background-color: hsl(224, 30%, 27%);
+    }
+
+    .button-background:active {
+      background: linear-gradient(to bottom,
+          hsl(252, 100%, 67%),
+          hsl(241, 81%, 54%));
+    }
+
+    .circle-gradient {
+      background: linear-gradient(to bottom,
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0));
+
+    }
+
+    .hanken-grotesk {
+      font-family: "Hanken Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="md:h-screen md:flex md:flex-col md:justify-center md:items-center">
+
+  <div class=" md:w-[640px] md:flex md:flex-row md:shadow-2xl md:rounded-3xl">
+
+    <div class="md:w-1/2 grid items-center justify-center grid-rows-6 
+     py-10 md:py-6 px-10 hanken-grotesk
+   bg-gradient text-white rounded-b-3xl md:rounded-3xl">
+      <span class="text-slate-200 text-center md:text-lg font-semibold row-span-1">Your Result</span>
+      <div class="row-span-3 w-28 h-28 ml-auto mr-auto md:w-44 md:h-44 flex flex-col
+    items-center justify-center
+    circle-gradient
+    rounded-full
+    ">
+        <p class="text-[40px] md:text-6xl font-extrabold md:mb-2">76</p>
+        <p class="text-[12px] text-slate-300 font-semibold">of 100</p>
+      </div>
+
+      <p class="text-xl text-center md:text-2xl md:font-bold row-span-1">Great</p>
+      <p class="row-span-1 text-sm font-light text-center text-slate-300"> You scored higher than 65% of
+        the people
+        who
+        have taken
+        these tests.</p>
+    </div>
+
+
+    <div class="md:w-1/2 grid items-center grid-rows-6 gap-4 p-6 ">
+      <p class="row-span-1 md:text-lg font-semibold">Summary</p>
+
+      <div class="row-span-1 flex flex-row p-4 justify-between
+    items-center bg-red-50 rounded-md">
+        <div class="flex flex-row  gap-2"><img src="./assets/images/icon-reaction.svg" alt="">
+          <p class="text-light-red font-semibold">Reaction</p>
+        </div>
+        <p class="text-slate-400"><b class="text-slate-800">80</b> / 100</p>
+      </div>
+
+      <div class="row-span-1 flex flex-row p-4 justify-between
+    items-center bg-yellow-50 rounded-md">
+        <div class="flex flex-row  gap-2"><img src="./assets/images/icon-memory.svg" alt="">
+          <p class="text-orange-yellow font-semibold">Memory</p>
+        </div>
+        <p class="text-slate-400"><b class="text-slate-800">92</b> / 100</p>
+      </div>
+
+      <div class="row-span-1 flex flex-row p-4 justify-between
+    items-center bg-green-50 rounded-md">
+        <div class="flex flex-row  gap-2"><img src="./assets/images/icon-verbal.svg" alt="">
+          <p class="text-green-teal font-semibold">Verbal</p>
+        </div>
+        <p class="text-slate-400"><b class="text-slate-800">61
+
+          </b> / 100</p>
+      </div>
+
+      <div class="row-span-1 flex flex-row p-4 justify-between
+    items-center bg-blue-100 rounded-md">
+
+        <div class="row-span-1 flex flex-row  gap-2"><img src="./assets/images/icon-visual.svg" alt="">
+          <p class="text-cobalt-blue font-semibold">Visual</p>
+        </div>
+        <p class="text-slate-400"><b class="text-slate-800">72</b> / 100</p>
+      </div>
+
+      <button class="row-span-1 p-4 text-white   font-semibold rounded-full button-background">Continue</button>
+    </div>
+  </div>
+
+
+
+  <div class="attribution md:mt-4">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">pratham mhavale</a>.
+  </div>
+</body>
+
+</html>
